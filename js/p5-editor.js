@@ -51,7 +51,7 @@ class P5Editor extends HTMLElement {
             background: #efefef;
           }
         </style>
-        <script src="../js/p5.min.js"></script>
+        <script src="/generative-drawing/js/p5.min.js"></script>
         <script>${code}</script>
       </head>
       <body>
