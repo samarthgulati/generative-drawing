@@ -1,0 +1,563 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Generative Drawing</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+		<style>
+			.reveal pre {
+				width: 100%;
+        height: 100%;
+				box-shadow: none;
+        display: flex;
+        margin: 0;
+			}
+
+      .reveal pre > code {
+        width: 100%;
+      }
+		</style>
+		<!-- Printing and PDF exports -->
+		<!-- <script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script> -->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+  strokeWeight(4);
+}
+
+function draw() {
+  background(220);
+  translate(center, center);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+        </section>
+      </section>
+      <section data-transition="fade-in">
+        <p5-editor>
+          <pre slot="code">
+            <code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+  strokeWeight(4);
+}
+
+function draw() {
+  background(220);
+  translate(frameCount, center);
+  point(0, 0);
+}
+          </code>
+        </pre>
+      </p5-editor>
+      </section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+  strokeWeight(4);
+}
+
+function draw() {
+  translate(frameCount, center);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+        </section>
+        <section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+  strokeWeight(4);
+}
+
+function draw() {
+  background(220, 10);
+  translate(frameCount, center);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+  strokeWeight(4);
+}
+
+function draw() {
+  background(220, 10);
+  translate(frameCount, center + random(-1, 1));
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+  strokeWeight(4);
+}
+
+function draw() {
+  background(220, 10);
+  translate(frameCount, center + noise(frameCount * 0.01) * 50);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+        </section>
+        <section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+var noiseAmp = 50;
+var noiseSpeed = 0.01;
+function setup() {
+  createCanvas(size, size);
+  //strokeWeight(4);
+}
+
+function draw() {
+  background(220, 10);
+  var x = frameCount % size;
+  var y = center - 0.5 * noiseAmp + noiseAmp * noise(frameCount * noiseSpeed);
+  translate(x, y);
+  point(0, 0);
+}
+  					</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+var noiseAmp = 50;
+var noiseSpeed = 0.01;
+function setup() {
+  createCanvas(size, size);
+  //strokeWeight(4);
+}
+
+function draw() {
+  background(220, 10);
+  translate(center, center);
+  rotate(frameCount * 0.01);
+  var y = 0.5 * center; //- 0.5 * noiseAmp + noiseAmp * noise(frameCount * noiseSpeed);
+  translate(0, y);
+  point(0, 0);
+}
+  					</code>
+					</pre>
+				</p5-editor>
+        </section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+var noiseAmp = 20;
+var noiseSpeed = 0.01;
+function setup() {
+  createCanvas(size, size);
+}
+
+function draw() {
+  background(220, 1);
+  translate(center, center);
+  rotate(frameCount * 0.01);
+  var y = 0.5 * center - 0.5 * noiseAmp + noiseAmp * noise(frameCount * noiseSpeed);
+  strokeWeight(4 * noise(frameCount * noiseSpeed));
+  translate(0, y);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+var noiseAmp = 20;
+var noiseSpeed = 0.01;
+function setup() {
+  createCanvas(size, size);
+}
+
+function draw() {
+  background(220, 1);
+  translate(center, center);
+  rotate(frameCount * 0.01);
+  var y = 0.5 * center - 0.5 * noiseAmp + noiseAmp * noise(frameCount * noiseSpeed);
+  strokeWeight(4 * noise(frameCount * noiseSpeed));
+  translate(0, y);
+  rotate(frameCount * 0.01);
+  translate(0, y);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+var noiseAmp = 20;
+var noiseSpeed = 0.01;
+function setup() {
+  createCanvas(size, size);
+}
+
+function draw() {
+  background(220, 1);
+  translate(center, center);
+  var a = frameCount * 0.005;
+  rotate(a);
+  var y = 0.5 * center// - 0.5 * noiseAmp + noiseAmp * noise(frameCount * noiseSpeed);
+  strokeWeight(4 * noise(frameCount * noiseSpeed));
+  translate(0, y);
+  rotate(a * 11.11);
+  translate(0, y * 0.25);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+var noiseAmp = 20;
+var noiseSpeed = 0.01;
+function setup() {
+  createCanvas(size, size);
+}
+
+function draw() {
+  background(220, 1);
+  translate(center, center);
+  var a = frameCount * 0.005;
+  rotate(a);
+  var y = 0.25 * center// - 0.5 * noiseAmp + noiseAmp * noise(frameCount * noiseSpeed);
+  strokeWeight(4 * noise(frameCount * noiseSpeed));
+  translate(0, y);
+  rotate(a * 5);
+  translate(0, y * 1.5);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<!--section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+// Cartoid
+var size = 400;
+var center = size * 0.5;
+var noiseAmp = 20;
+var noiseSpeed = 0.01;
+function setup() {
+  createCanvas(size, size);
+}
+
+function draw() {
+  background(220, 1);
+  translate(center, center);
+  var a = frameCount * 0.005;
+  rotate(a);
+  strokeWeight(4 * noise(frameCount * noiseSpeed));
+  translate(0, center * 0.5 * (1 + cos(a)));
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section-->
+				<!--section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+// Cissoid of Diocles
+var size = 400;
+var center = size * 0.5;
+var noiseAmp = 20;
+var noiseSpeed = 0.01;
+function setup() {
+  createCanvas(size, size);
+}
+
+function draw() {
+  background(220, 1);
+  translate(center, center);
+  var a = frameCount * 0.005;
+  rotate(a);
+  strokeWeight(4 * noise(frameCount * noiseSpeed));
+  translate(0, center * 0.5 * tan(a) * sin(a));
+  //translate(0, center * 0.5 * tan(a * 2) * sin(a * 0.5));
+  point(0, 0);
+}
+  					</code>
+					</pre>
+				</p5-editor>
+				</section-->
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+// Rose curve
+// https://editor.p5js.org/samarthgulati/sketches/GxMb_dgTI
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+}
+
+function draw() {
+  background(220, 1);
+  translate(center, center);
+  var a = frameCount * 0.05;
+  rotate(a);
+  translate(0, center * 0.5 * cos(a * 0.1));
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+// Lissajous polar form
+// https://mathcurve.com/courbes2d.gb/lissajous/lissajous.shtml
+
+// https://editor.p5js.org/samarthgulati/sketches/XrkDvbZWn
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+}
+
+function draw() {
+  background(220, 1);
+  translate(center, center);
+  var a = frameCount * 0.005;
+  rotate(PI * 0.5 * sin(a * 7 + PI / 2));
+  translate(0, center * 0.5 * sin(a * 3));
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+// Butterfly 
+// https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)
+
+// https://editor.p5js.org/samarthgulati/sketches/wQ21I9VQx
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+}
+
+function draw() {
+  background(220, 1);
+  translate(center, center);
+  var a = frameCount * 0.005;
+  rotate(a);
+  var E = Math.E;
+  translate(-50 * (pow(E, sin(a)) - 2 * cos(4 * a) + pow(sin((2 * a - PI) / 24), 5)), 0);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+// Maple 
+// http://jwilson.coe.uga.edu/EMT668/EMAT6680.2003.fall/Shiver/assignment11/PolarGraphs.htm
+
+// https://editor.p5js.org/samarthgulati/sketches/HM0-gXUJ2
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+}
+
+function draw() {
+  background(220, 0);
+  translate(center, center);
+  var a = frameCount * 0.1;
+  rotate(a);
+  var E = Math.E;
+  translate(-50 * (sin(a) + pow(sin(2.5 * a), 3)), 0);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+// Donut
+// https://www.maplesoft.com/applications/view.aspx?SID=4087&view=html
+
+// https://editor.p5js.org/samarthgulati/sketches/PIAbSwq7r
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+}
+
+function draw() {
+  background(220, 0);
+  translate(center, center);
+  var a = frameCount * 0.1;
+  rotate(a);
+  translate((cos(0.95 * a) * 15 + 25) * center * 0.01, 0);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+        <section data-transition="fade-in">
+					<p5-editor>
+						<pre slot="code">
+							<code class="javascript" contenteditable data-trim>
+var size = 400;
+var center = size * 0.5;
+function setup() {
+  createCanvas(size, size);
+  colorMode(HSL, 100);
+  strokeWeight(4);
+}
+
+function draw() {
+  background(220, 1);
+  translate(center, center);
+  var a = frameCount * 0.05;
+  var h = frameCount % 100;
+  rotate(a);
+  translate(center * 0.25, 0);
+  stroke(h, 50, 50);
+  point(0, 0);
+}
+						</code>
+					</pre>
+				</p5-editor>
+				</section>
+			</div>
+		</div>
+		<script src="js/p5-editor.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+      });
+      Reveal.addEventListener('slidechanged', 
+        e => e.currentSlide.firstElementChild._slotChange()
+      )
+		</script>
+	</body>
+</html>
+
