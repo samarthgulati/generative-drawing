@@ -41,14 +41,16 @@ class P5Editor extends HTMLElement {
       <head>
         <style>
           html, body {
-            width: 400px;
-            height: 400px;
+            width: 100%;
+            height: 100%;
             margin: 0;
             overflow: hidden;
           }
           canvas {
             margin: 0;
             background: #efefef;
+            width: 100vw !important;
+            height: 100vh !important;
           }
         </style>
         <script src="../js/p5.min.js"></script>

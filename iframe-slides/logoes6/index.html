@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Logo - ES6</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html, body {
+      overflow: hidden;
+      /* 181e3c */
+      /* background: cyan; */
+    }
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<head>
+    <title>Logo</title>
+</head>
+
+<body class="logo">
+    <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-100 -100 200 200" preserveAspectRatio="xMidYMid" style="width:100%; height:100%;">
+        <circle class="grid gridC" id="gridCio" r="52" fill="none" stroke="#efefef"></circle>
+        <circle class="grid gridC" id="gridCii" r="40" fill="none" stroke="#efefef"></circle>
+        <circle class="grid gridC" id="gridCoo" r="80" fill="none" stroke="#efefef"></circle>
+        <circle class="grid gridC" id="gridCoi" r="68" fill="none" stroke="#efefef"></circle>
+        <rect class="grid gridR" id="gridRhr" x="-80" y="-6" width="160" height="12" fill="none" stroke="#efefef"></rect>
+        <rect class="grid gridR" id="gridRangle" x="-84" y="-3" width="168" height="6" fill="none" stroke="#efefef" transform="rotate(-30)"></rect>
+
+
+        <path id="gArc"  d="M 52 0 A 52 52 0 1 0 45.03 26 L 34.64 20 A 40 40 0 1 1 40 0 Z" fill="cyan" stroke="none" transform="rotate(-30)"></path>
+        <path class="sArc" id="sArcT" d="M 80 0 A 80 80 0 0 0 -69.28 -40 L -58.89 -34 A 68 68 0 0 1 68 0 Z" fill="cyan" stroke="none" transform="scale(-1,1)"></path>
+        <path class="sArc" id="sArcB" d="M 80 0 A 80 80 0 0 0 -69.28 -40 L -58.89 -34 A 68 68 0 0 1 68 0 Z" fill="cyan" stroke="none" transform="scale(1,-1)"></path>
+        <rect id="sStem" x="40" y="-6" width="40" height="12" fill="cyan" transform="scale(-1,1)"></rect>
+        <rect id="gStem" x="20" y="-6" width="60" height="12" fill="cyan"></rect>
+        
+        <rect class="serif" id="sSerifT" x="-84" y="-3" width="20" height="6" fill="cyan" transform="rotate(-30, 0, 0) scale(-1,1)"></rect>
+        
+        <rect class="serif" id="gSerif" x="-56" y="-3" width="20" height="6" fill="cyan" transform="rotate(-30, 0, 0) scale(-1,1)"></rect>
+        <rect class="serif" id="sSerifB" x="64" y="-3" width="20" height="6" fill="cyan" transform="rotate(-30, 0, 0) scale(-1,1)"></rect>
+        
+        
+        
+    </svg>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>Generative Drawing</title>
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/reveal.css">
+		<link rel="stylesheet" href="./css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+		<link rel="stylesheet" href="./lib/css/monokai.css">
 		<style>
 			.reveal pre {
 				width: 100%;
@@ -37,6 +37,68 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-transition="fade-in">
+					<img style="border: none" src="./assets/GenerativeDrawing-Slides.jpg" alt="">
+				</section>
+				<section data-transition="fade-in">
+					<iframe style="width:960px; height:680px;" src="./iframe-slides/logoes6/index.html"></iframe>
+				</section>
+				<section 
+					data-id="c535ffcef10f15344fa105c76b487c6b" 
+					data-background-color="#000000" 
+					data-background-size="contain" 
+					data-background-video-muted="true" 
+					data-background-video-loop="true" 
+					data-background-video="https://s3.amazonaws.com/media-p.slid.es/videos/992298/jMLbGeXR/uis-rundown.mp4" 
+					data-background-video-thumb="https://s3.amazonaws.com/media-p.slid.es/videos/992298/jMLbGeXR/uis-rundown_thumb_00001.jpg" 
+					data-background-media-id="5737544" 
+					class="has-dark-background present" 
+					style="display: block;">
+				</section>
+				<section data-transition="fade-in">
+					<style>
+						#gd-showcase {
+							display: grid; 
+							grid-template-columns: repeat(3, 33%);
+							grid-template-rows: repeat(2, 50%);
+							justify-content: center; 
+							align-items: center; 
+							justify-items: center;
+							width: 960px; 
+							height: calc(960px * 2 / 3);
+							max-height: 796px;
+							max-width: calc(796px * 3 / 2); 
+							margin: auto;
+						}
+						/* @media (max-aspect-ratio: 3/2) {
+							#gd-showcase {
+								grid-template-columns: repeat(3, 30vw);
+								grid-template-rows: repeat(2, 30vw);
+							}
+						} */
+					</style>
+					<div id="gd-showcase">
+						<img style="object-fit:cover; width:100%; height: 100%; border:none;" src="./assets/facemask.gif" alt="">
+						<img style="object-fit:cover; width:100%; height: 100%; border:none;" src="./assets/blooming.gif" alt="">
+						<img style="object-fit:cover; width:100%; height: 100%; border:none;" src="./assets/illusions.gif" alt="">
+						<img style="object-fit:cover; width:100%; height: 100%; border:none;" src="./assets/dither-mirror.gif" alt="">
+						<img style="object-fit:cover; width:100%; height: 100%; border:none;" src="./assets/flubber.gif" alt="">
+						<img style="object-fit:cover; width:100%; height: 100%; border:none;" src="./assets/plotter.gif" alt="">
+					</div>
+				</section>
+				<section data-transition="fade-in">
+					<style>
+						#gd-p5-iframe {
+							width: 960px; 
+							height: 756px;
+							margin: auto;
+						}
+					</style>
+					<iframe id="gd-p5-iframe" src="iframe-slides/p5js/index.html"></iframe>
+				</section>
+				<section data-transition="fade-in">
+					<a style="font-size:4rem; font-family:Monaco, monospace;" target="_blank" href="https://editor.p5js.org/">https://editor.p5js.org/</a>
+				</section>
+				<section data-transition="fade-in">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
@@ -52,6 +114,7 @@ function draw() {
 				</p5-editor>
 				</section>
 				<section data-transition="fade-in">
+					<img src="https://media.giphy.com/media/YBkTzzyNewWtUANTso/giphy.gif" class="fragment" style="position: absolute; transform: rotate(15deg) scale(0.5) translate(300px, -500px);" alt="">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
@@ -73,6 +136,8 @@ function draw() {
         </section>
       </section>
       <section data-transition="fade-in">
+				<img src="https://media.giphy.com/media/duzR6ALR9YRqg/giphy.gif" class="fragment" style="position: absolute; transform: rotate(-5deg) scale(0.5) translate(200px, -300px);" alt="">
+				<img src="https://media.giphy.com/media/l41YgtisiFCCu4H9C/giphy.gif" class="fragment" style="position: absolute; transform: rotate(10deg) scale(0.75) translate(100px, -150px);" alt="">
         <p5-editor>
           <pre slot="code">
             <code class="javascript" contenteditable data-trim>
@@ -93,6 +158,7 @@ function draw() {
       </p5-editor>
       </section>
 				<section data-transition="fade-in">
+					<img src="https://media.giphy.com/media/26BGDEJS1QPcyfako/giphy.gif" class="fragment" style="position: absolute; transform: rotate(-15deg) scale(0.5) translate(200px, -300px);" alt="">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
@@ -112,6 +178,7 @@ function draw() {
 				</p5-editor>
         </section>
         <section data-transition="fade-in">
+					<img src="https://media.giphy.com/media/Ndce8XyW32MCI/giphy.gif" class="fragment" style="position: absolute; transform: rotate(5deg) scale(0.5) translate(200px, -300px);" alt="">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
@@ -132,6 +199,7 @@ function draw() {
 				</p5-editor>
 				</section>
 				<section data-transition="fade-in">
+					<img src="https://i.pinimg.com/originals/c6/7a/78/c67a78e33f62e152f42d60114cba16c7.gif" class="fragment" style="position: absolute; transform: rotate(3deg) scale(0.5) translate(200px, -300px);" alt="">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
@@ -172,6 +240,7 @@ function draw() {
 				</p5-editor>
         </section>
         <section data-transition="fade-in">
+					<img src="./assets/streaks.jpg" class="fragment" style="position: absolute; transform: rotate(-3deg) scale(0.5) translate(200px, -300px);" alt="">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
@@ -185,7 +254,7 @@ function setup() {
 }
 
 function draw() {
-  background(220, 10);
+  background(220, 1);
   var x = frameCount % size;
   var y = center - 0.5 * noiseAmp + noiseAmp * noise(frameCount * noiseSpeed);
   translate(x, y);
@@ -196,6 +265,10 @@ function draw() {
 				</p5-editor>
 				</section>
 				<section data-transition="fade-in">
+					<iframe style="width:960px; height:680px;" src="https://url-timer.glitch.me/?time=15"></iframe>
+				</section>
+				<section data-transition="fade-in">
+					<img src="https://media.giphy.com/media/83eQIMgNvkiY/giphy.gif" class="fragment" style="position: absolute; transform: rotate(2deg) scale(0.5) translate(200px, -300px);" alt="">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
@@ -221,6 +294,7 @@ function draw() {
 				</p5-editor>
         </section>
 				<section data-transition="fade-in">
+					<img src="https://media.giphy.com/media/3oriOeYGl5MKFtb2FO/giphy.gif" class="fragment" style="position: absolute; transform: rotate(-5deg) scale(0.5) translate(200px, -300px);" alt="">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
@@ -246,6 +320,7 @@ function draw() {
 				</p5-editor>
 				</section>
 				<section data-transition="fade-in">
+					<img src="https://media.giphy.com/media/xT77XK4iyiDZUFfsE8/giphy.gif" class="fragment" style="position: absolute; transform: rotate(-3deg) scale(1) translate(50px, -50px);" alt="">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
@@ -273,6 +348,7 @@ function draw() {
 				</p5-editor>
 				</section>
 				<section data-transition="fade-in">
+					<img src="https://media.giphy.com/media/RvXlPdOSX8Yus/giphy.gif" class="fragment" style="position: absolute; transform: rotate(5deg) scale(1) translate(50px, -50px);" alt="">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
@@ -301,6 +377,7 @@ function draw() {
 				</p5-editor>
 				</section>
 				<section data-transition="fade-in">
+					<img src="https://media.giphy.com/media/ToMjGpOrazZl3mR9Ck8/giphy.gif" class="fragment" style="position: absolute; transform: rotate(-5deg) scale(0.5) translate(200px, -300px);" alt="">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
@@ -327,6 +404,9 @@ function draw() {
 						</code>
 					</pre>
 				</p5-editor>
+				</section>
+				<section data-transition="fade-in">
+					<iframe style="width:960px; height:680px;" src="https://url-timer.glitch.me/?time=15"></iframe>
 				</section>
 				<!--section data-transition="fade-in">
 					<p5-editor>
@@ -431,14 +511,14 @@ function draw() {
 					</pre>
 				</p5-editor>
 				</section>
-				<section data-transition="fade-in">
+				<!--section data-transition="fade-in">
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
-// Butterfly 
-// https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)
+// Donut
+// https://www.maplesoft.com/applications/view.aspx?SID=4087&view=html
 
-// https://editor.p5js.org/samarthgulati/sketches/wQ21I9VQx
+// https://editor.p5js.org/samarthgulati/sketches/PIAbSwq7r
 var size = 400;
 var center = size * 0.5;
 function setup() {
@@ -446,18 +526,17 @@ function setup() {
 }
 
 function draw() {
-  background(220, 1);
+  background(220, 0);
   translate(center, center);
-  var a = frameCount * 0.005;
+  var a = frameCount * 0.1;
   rotate(a);
-  var E = Math.E;
-  translate(-50 * (pow(E, sin(a)) - 2 * cos(4 * a) + pow(sin((2 * a - PI) / 24), 5)), 0);
+  translate((cos(0.95 * a) * 15 + 25) * center * 0.01, 0);
   point(0, 0);
 }
 						</code>
 					</pre>
 				</p5-editor>
-				</section>
+				</section-->
 				<section data-transition="fade-in">
 					<p5-editor>
 						<pre slot="code">
@@ -489,10 +568,10 @@ function draw() {
 					<p5-editor>
 						<pre slot="code">
 							<code class="javascript" contenteditable data-trim>
-// Donut
-// https://www.maplesoft.com/applications/view.aspx?SID=4087&view=html
+// Butterfly 
+// https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)
 
-// https://editor.p5js.org/samarthgulati/sketches/PIAbSwq7r
+// https://editor.p5js.org/samarthgulati/sketches/wQ21I9VQx
 var size = 400;
 var center = size * 0.5;
 function setup() {
@@ -500,11 +579,12 @@ function setup() {
 }
 
 function draw() {
-  background(220, 0);
+  background(220, 1);
   translate(center, center);
-  var a = frameCount * 0.1;
+  var a = frameCount * 0.005;
   rotate(a);
-  translate((cos(0.95 * a) * 15 + 25) * center * 0.01, 0);
+  var E = Math.E;
+  translate(-50 * (pow(E, sin(a)) - 2 * cos(4 * a) + pow(sin((2 * a - PI) / 24), 5)), 0);
   point(0, 0);
 }
 						</code>
@@ -537,6 +617,46 @@ function draw() {
 					</pre>
 				</p5-editor>
 				</section>
+				<section data-transition="fade-in">
+					<style>
+						#hue-rotate {
+							animation: hue-rot 5s linear infinite;
+						}
+						@keyframes hue-rot {
+							0% {
+								filter: hue-rotate(0deg);
+							}
+							100% {
+								filter: hue-rotate(360deg);
+							}
+						}
+					</style>
+					<a id="hue-rotate" href="https://editor.p5js.org/samarthgulati/sketches/NtruQAdUW">
+						<p style="font-size:4rem; font-family:Monaco, monospace;">Make it a GIF!</p>
+					</a>
+				</section>
+				<section data-transition="fade-in">
+					<iframe style="width:960px; height:680px;" src="https://url-timer.glitch.me/?time=15"></iframe>
+				</section>
+				<section data-transition="fade-in">
+					<p style="font-size:4rem; font-family:Monaco, monospace;">Show and Tell</p>
+					<a href="twitter.com/samarthishere">@samarthishere</a>
+				</section>
+				<section data-transition="fade-in">
+					<p style="font-size:4rem; font-family:Monaco, monospace;">What's next?</p>
+					<ul>
+						<li class="fragment strike" data-fragment-index="1">Dot to lines and curves</li>
+						<li class="fragment fade-in" data-fragment-index="2">Lines to polygons</li>
+						<li class="fragment fade-in" data-fragment-index="3">Arrangement - tiling and nesting</li>
+					</ul>
+					<br>
+					<img class="fragment fade-in" style="height:136px;" data-fragment-index="2" src="./assets/polygon.gif" alt="">
+					<img class="fragment fade-in" style="height:136px;" data-fragment-index="3" src="./assets/arrangement.gif" alt="">
+				</section>
+				<section data-transition="fade-in">
+					<p style="font-size:4rem; font-family:Monaco, monospace;">Feedback</p>
+					<a href="http://bit.do/gd-feedback" target="_blank">http://bit.do/gd-feedback</a>
+				</section>
 			</div>
 		</div>
 		<script src="js/p5-editor.js"></script>
@@ -555,7 +675,11 @@ function draw() {
 				]
       });
       Reveal.addEventListener('slidechanged', 
-        e => e.currentSlide.firstElementChild._slotChange()
+        function (e) {
+					var editor = e.currentSlide.querySelector('p5-editor');
+					if(!editor) return;
+					editor._slotChange();
+				}
       )
 		</script>
 	</body>
