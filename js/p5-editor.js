@@ -53,7 +53,7 @@ class P5Editor extends HTMLElement {
             height: 100vh !important;
           }
         </style>
-        <script src="../js/p5.min.js"></script>
+        <script src="/generative-drawing/js/p5.min.js"></script>
         <script>${code}</script>
       </head>
       <body>
