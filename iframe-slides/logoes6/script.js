@@ -357,6 +357,7 @@ class Animator {
     } else {
       console.log('done');
       this.playing = false;
+      document.body.dispatchEvent(new CustomEvent('animation-complete'))
     }
   }
 
@@ -367,7 +368,6 @@ class Animator {
       let date = new Date();
       this.time = this.tstart = date.getTime();
       this.start(this.idx);
-
     }
   }}
 
@@ -521,4 +521,9 @@ let animProp = [{
 
 
 let anim = new Animator(animProp);
-document.addEventListener('click', () => {anim.play();});
+document.addEventListener('DOMContentLoaded', () => {anim.play();});
+document.body.addEventListener('animation-complete', () => {
+  setTimeout(() => {
+    anim.play();
+  }, 1500)
+})
